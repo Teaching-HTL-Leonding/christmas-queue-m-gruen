@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="svg1"
+   viewBox="0 0 357.28423 474.34627"
+   version="1.0"
+   y="0"
+   x="0"
+   sodipodi:docname="arrow.svg"
+   width="357.28424"
+   height="474.34628"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs10">
+    <linearGradient
+       id="linearGradient8"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#e490bc;stop-opacity:1;"
+         offset="0"
+         id="stop9" />
+      <stop
+         style="stop-color:#e3b9ce;stop-opacity:1;"
+         offset="1"
+         id="stop10" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient8"
+       id="linearGradient10"
+       x1="7.6114502"
+       y1="246.43477"
+       x2="233.77754"
+       y2="142.24139"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.86285661,0,0,0.86377854,24.505325,32.308122)" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview8"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     objecttolerance="10.0"
+     gridtolerance="10.0"
+     guidetolerance="10.0"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="1"
+     inkscape:cx="143.5"
+     inkscape:cy="270.5"
+     inkscape:current-layer="svg1"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:window-width="1920"
+     inkscape:window-height="1129"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <path
+     id="path3063"
+     style="color:#000000;fill:url(#linearGradient10);fill-opacity:1;fill-rule:evenodd;stroke:#e490bc;stroke-width:9.99995;stroke-dasharray:none;stroke-opacity:1"
+     d="m 332.78497,244.35427 c -0.0691,-2.32443 -0.79902,-4.69433 -2.22962,-6.70609 v -0.007 L 181.68732,34.955458 c -1.20982,-1.651717 -3.23916,-2.668091 -5.285,-2.647015 -2.04583,0.02099 -4.05534,1.078825 -5.23107,2.754987 L 28.636434,237.75784 c -2.801954,3.61206 -5.687907,9.93627 -3.158184,13.99084 1.421211,2.1572 4.219196,3.3074 6.744432,2.77186 L 119.5094,236.13825 98.853077,434.88492 c -0.18768,1.79571 0.4178,3.66057 1.622923,5.00384 1.20511,1.34327 2.99095,2.14389 4.79458,2.14933 h 136.28079 c 9.08674,0.0423 10.28093,-7.66461 9.49141,-13.84745 l -19.88108,-191.4383 89.87527,17.7935 c 7.78572,1.39205 11.92459,-4.25137 11.748,-10.19157 z" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:date>2013-08-09T10:17:56</dc:date>
+        <dc:description>Neatened up the edges and dispensed with the use of transparency.&#10;\nNot obvious changes but noticeable at high zoom.</dc:description>
+        <dc:source>https://openclipart.org/detail/181706/red-arrow-left-pointing-by-symbolicm-181706</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>symbolicM</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>Direction</rdf:li>
+            <rdf:li>arrow</rdf:li>
+            <rdf:li>highlight</rdf:li>
+            <rdf:li>point</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

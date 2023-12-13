@@ -1,0 +1,60 @@
+﻿@page "/"
+@using BlafettisLib
+
+<div class="enclosure">
+    @* Note that we are using CSS Grid here (see also https://css-tricks.com/snippets/css/complete-guide-grid/) *@
+    <div class="container" style="grid-template-columns: repeat(@Columns, 1fr);">
+        @for (var row = 0; row <= @Rows; row++)
+        {
+            @for (var col = 0; col < @Columns; col++)
+            {
+                var r = row;
+                var c = col;
+                var stack = Stacks!.GetAt(col) ?? throw new InvalidOperationException($"Could not get stack at {col}");
+                <div @onclick="() => ItemClicked(r, c)" class="@(row != @Rows ? "item" : "")">
+                    @if (row == @Rows && !Won)
+                    {
+                        @if (From == col)
+                        {
+                            @* From has already been set, so we have to mark the source column with an arrow *@
+                            <img src="../images/arrow2.svg" />
+                        }
+                        else
+                        {
+                            @if (From == null && !stack.IsEmpty)
+                            {
+                                @* User is currently picking the source column, so we have to leave out empty columns *@
+                                <img src="../images/arrow2.svg" class="transparent" />
+                            }
+                            if (From != null && !stack.IsFull)
+                            {
+                                @* User is currently picking the destination column, so we have to leave out full columns *@
+                                <img src="../images/arrow.svg" class="transparent" />
+                            }
+                        }
+                    }
+                    else if (row != @Rows)
+                    {
+                        var content = stack.Peek(Rows.Value - row - 1);
+                        if (content == null)
+                        {
+                            <img src="../images/empty.png" />
+                        }
+                        else
+                        {
+                            <img src="../images/@content" />
+                        }
+                    }
+                </div>
+            }
+        }
+    </div>
+    <button style="visibility: @(Won ? "visible" : "hidden")">
+        Congratulations! You needed @Moves moves.
+        <Blafettis @ref="Blafettis" />
+    </button>
+</div>
+
+<p class="seed">
+    @Seed
+</p>

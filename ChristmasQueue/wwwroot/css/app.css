@@ -1,0 +1,17 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#app {
+    background-image: url(../images/bg.png);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    padding: 5% 5% 0 5%;
+}
+
