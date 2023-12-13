@@ -61,6 +61,19 @@ public class StackTests
         Assert.Equal("item1", bottomContent);
     }
 
+        [Fact]
+    public void Peek_OnEmptyStack_ShouldReturnNull()
+    {
+        // Arrange
+        var stack = new Stack(3);
+
+        // Act
+        var topContent = stack.Peek(0);
+
+        // Assert
+        Assert.Null(topContent);
+    }
+
     [Fact]
     public void IsEmpty_Initially_ShouldBeTrue()
     {
