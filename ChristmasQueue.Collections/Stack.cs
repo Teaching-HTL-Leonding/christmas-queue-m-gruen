@@ -42,6 +42,8 @@ public class Stack
     /// Gets or sets the first node in the stack.
     /// </summary>
     private StackNode? First { get; set; }
+    private int MaxHeight {get; set; }
+    private int CurrentHeight {get; set; } = 0;
 
     /// <summary>
     /// Initializes a new instance of the Stack class with the specified maximum height.
@@ -53,8 +55,9 @@ public class Stack
     /// </remarks>
     public Stack(int maxHeight)
     {
-        // TODO: Add implementation
-        throw new NotImplementedException();
+        MaxHeight = maxHeight;
+
+        // Done!
     }
 
     /// <summary>
@@ -64,8 +67,14 @@ public class Stack
     /// <returns>True if the item was successfully added; otherwise, false.</returns>
     public bool TryPush(string content)
     {
-        // TODO: Add implementation
-        throw new NotImplementedException();
+        if (CurrentHeight == MaxHeight) { return false; }
+
+        var newNode = new StackNode(content) { Next = First };
+        First = newNode;
+        CurrentHeight++;
+        return true;
+
+        // Done!
     }
 
     /// <summary>
@@ -75,9 +84,19 @@ public class Stack
     /// <returns>True if the item was successfully removed; otherwise, false.</returns>
     public bool TryPop(out string content)
     {
-        // TODO: Add implementation
-        throw new NotImplementedException();
-    }
+        if (First is null)
+        {
+            content = null!;
+            return false;
+        }
+
+        content = First!.Content;
+        First = First.Next;
+        CurrentHeight--;
+        return true;
+
+        // Done!
+        }
 
     /// <summary>
     /// Peeks at a specific depth in the stack without removing the item.
@@ -86,32 +105,39 @@ public class Stack
     /// <returns>The content at the specified depth, or null if the depth exceeds the stack size.</returns>
     public string? Peek(int depth)
     {
-        // TODO: Add implementation
-        throw new NotImplementedException();
+        var current = First;
+        for (int i = 0; i < depth; i++)
+        {
+            if (current is null) { return null; }
+            current = current.Next;
+        }
+        return current!.Content;
+
+        // Done!
     }
 
     /// <summary>
     /// Gets a value indicating whether the stack is empty.
     /// </summary>
-    public bool IsEmpty => 
-        // TODO: Add implementation
-        throw new NotImplementedException();
+    public bool IsEmpty => First is null; // Done!
 
     /// <summary>
     /// Gets a value indicating whether the stack is full.
     /// </summary>
-    public bool IsFull => 
-        // TODO: Add implementation
-        throw new NotImplementedException();
-
+    public bool IsFull => CurrentHeight == MaxHeight; // Done!
 
     /// <summary>
     /// Checks if all elements in the stack are the same.
     /// </summary>
     /// <returns>True if all elements are the same, or the stack is empty; otherwise, false.</returns>
     public bool IsHomogeneous()
-    {
-        // TODO: Add implementation
-        throw new NotImplementedException();
+    {   
+        for (var current = First; current is not null; current = current.Next)
+        {
+            if (current.Content != First!.Content) { return false; }
+        }   
+        return true;
+
+        // Done!
     }
 }
