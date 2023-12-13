@@ -55,8 +55,6 @@ public class ListOfStacks
             var node = new ListNode(maxStackHeight) { Next = First };
             First = node;
         }
-
-        // Done!
     }
 
     /// <summary>
@@ -73,8 +71,6 @@ public class ListOfStacks
             current = current.Next;
         }
         return current?.Stack;
-
-        // Done!
     }
 
     /// <summary>
@@ -91,7 +87,5 @@ public class ListOfStacks
         }
 
         return result;
-
-        // Done!
     }
 }

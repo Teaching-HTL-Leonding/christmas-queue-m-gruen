@@ -56,8 +56,6 @@ public class Stack
     public Stack(int maxHeight)
     {
         MaxHeight = maxHeight;
-
-        // Done!
     }
 
     /// <summary>
@@ -67,14 +65,12 @@ public class Stack
     /// <returns>True if the item was successfully added; otherwise, false.</returns>
     public bool TryPush(string content)
     {
-        if (CurrentHeight == MaxHeight) { return false; }
+        if (IsFull) { return false; }
 
         var newNode = new StackNode(content) { Next = First };
         First = newNode;
         CurrentHeight++;
         return true;
-
-        // Done!
     }
 
     /// <summary>
@@ -84,9 +80,9 @@ public class Stack
     /// <returns>True if the item was successfully removed; otherwise, false.</returns>
     public bool TryPop(out string content)
     {
-        if (First is null)
+        if (IsEmpty)
         {
-            content = null!;
+            content = "";
             return false;
         }
 
@@ -94,8 +90,6 @@ public class Stack
         First = First.Next;
         CurrentHeight--;
         return true;
-
-        // Done!
         }
 
     /// <summary>
@@ -111,9 +105,7 @@ public class Stack
             if (current is null) { return null; }
             current = current.Next;
         }
-        return current!.Content;
-
-        // Done!
+        return current?.Content;
     }
 
     /// <summary>
@@ -137,7 +129,5 @@ public class Stack
             if (current.Content != First!.Content) { return false; }
         }   
         return true;
-
-        // Done!
     }
 }
