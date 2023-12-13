@@ -61,7 +61,7 @@ public class StackTests
         Assert.Equal("item1", bottomContent);
     }
 
-        [Fact]
+    [Fact]
     public void Peek_OnEmptyStack_ShouldReturnNull()
     {
         // Arrange

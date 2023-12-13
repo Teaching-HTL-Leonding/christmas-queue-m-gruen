@@ -65,7 +65,7 @@ public class ListOfStacks
     public Stack? GetAt(int stackIndex)
     {
         var current = First;
-        for(int i = 0; i < stackIndex; i++)
+        for (int i = 0; i < stackIndex; i++)
         {
             if (current == null) { return null; }
             current = current.Next;
@@ -81,7 +81,7 @@ public class ListOfStacks
     {
         bool result = true;
 
-        for(var current = First; current != null; current = current.Next)
+        for (var current = First; current != null; current = current.Next)
         {
             result &= current.Stack.IsHomogeneous();
         }

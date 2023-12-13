@@ -42,8 +42,8 @@ public class Stack
     /// Gets or sets the first node in the stack.
     /// </summary>
     private StackNode? First { get; set; }
-    private int MaxHeight {get; set; }
-    private int CurrentHeight {get; set; } = 0;
+    private int MaxHeight { get; set; }
+    private int CurrentHeight { get; set; } = 0;
 
     /// <summary>
     /// Initializes a new instance of the Stack class with the specified maximum height.
@@ -90,7 +90,7 @@ public class Stack
         First = First.Next;
         CurrentHeight--;
         return true;
-        }
+    }
 
     /// <summary>
     /// Peeks at a specific depth in the stack without removing the item.
@@ -105,7 +105,7 @@ public class Stack
             if (current is null) { return null; }
             current = current.Next;
         }
-        return current?.Content;
+        return current?.Content; // Here was the error. I was returning current!.Content
     }
 
     /// <summary>
@@ -123,11 +123,11 @@ public class Stack
     /// </summary>
     /// <returns>True if all elements are the same, or the stack is empty; otherwise, false.</returns>
     public bool IsHomogeneous()
-    {   
+    {
         for (var current = First; current is not null; current = current.Next)
         {
             if (current.Content != First!.Content) { return false; }
-        }   
+        }
         return true;
     }
 }
