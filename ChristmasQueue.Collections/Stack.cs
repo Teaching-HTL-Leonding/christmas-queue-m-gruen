@@ -42,7 +42,7 @@ public class Stack
     /// Gets or sets the first node in the stack.
     /// </summary>
     private StackNode? First { get; set; }
-    private int MaxHeight { get; set; }
+    private int MaxHeight { get; }
     private int CurrentHeight { get; set; } = 0;
 
     /// <summary>
