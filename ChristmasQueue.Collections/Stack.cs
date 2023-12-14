@@ -80,14 +80,10 @@ public class Stack
     /// <returns>True if the item was successfully removed; otherwise, false.</returns>
     public bool TryPop(out string content)
     {
-        if (IsEmpty)
-        {
-            content = "";
-            return false;
-        }
+        content = First?.Content ?? "";
+        if (IsEmpty) { return false; }
 
-        content = First!.Content;
-        First = First.Next;
+        First = First?.Next;
         CurrentHeight--;
         return true;
     }
@@ -126,7 +122,7 @@ public class Stack
     {
         for (var current = First; current is not null; current = current.Next)
         {
-            if (current.Content != First!.Content) { return false; }
+            if (current.Content != First?.Content) { return false; }
         }
         return true;
     }
