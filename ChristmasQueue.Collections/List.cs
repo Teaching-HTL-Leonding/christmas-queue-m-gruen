@@ -79,13 +79,10 @@ public class ListOfStacks
     /// <returns>True if all stacks are homogeneous; otherwise, false.</returns>
     public bool AreAllStacksHomogeneous()
     {
-        bool result = true;
-
         for (var current = First; current != null; current = current.Next)
         {
-            result &= current.Stack.IsHomogeneous();
+            if (!current.Stack.IsHomogeneous()) { return false; }
         }
-
-        return result;
+        return true;
     }
 }
