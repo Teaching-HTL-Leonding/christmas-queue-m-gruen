@@ -107,12 +107,12 @@ public class Stack
     /// <summary>
     /// Gets a value indicating whether the stack is empty.
     /// </summary>
-    public bool IsEmpty => First is null; // Done!
+    public bool IsEmpty => First is null;
 
     /// <summary>
     /// Gets a value indicating whether the stack is full.
     /// </summary>
-    public bool IsFull => CurrentHeight == MaxHeight; // Done!
+    public bool IsFull => CurrentHeight == MaxHeight;
 
     /// <summary>
     /// Checks if all elements in the stack are the same.
